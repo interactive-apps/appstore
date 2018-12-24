@@ -1,0 +1,224 @@
+
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-3">
+      <h1 class="my-4">Categories</h1>
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let categoryId of (appsCategories$ | async).ids; trackBy: trackByFn; let i = index;"
+            class="list-group list-group-item-action {{(i === 0)? 'active': ''}} left-items-padding"
+            [ngClass]="{'category-selected':(appsCategories$ | async).entities[categoryId].isSelected}"
+          (click)="toggleCategory($event, categoryId)">
+          {{(appsCategories$ | async).entities[categoryId].categoryName}}
+        </li>
+      </ul>
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-9">
+
+        <!--Loader imitating carousel-->
+      <div class="carousel slide my-4" data-ride="carousel"
+           *ngIf="(allAppsState$ | async).entities.length < 1">
+        <app-progressive-loader
+          [height]="'320px'"
+          [width]="'825px'"
+        ></app-progressive-loader>
+      </div>
+      <!--End of Loader imitating carousel-->
+
+      <!--Dynamic carousel section-->
+      <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel"
+           *ngIf="(allAppsState$ | async).entities.length > 0">
+        <div class="carousel-inner" role="listbox">
+          <div  *ngFor="let app of (allAppsState$ | async).entities; trackBy: trackByFn; let i = index"
+                class="carousel-item {{(i === 0)? 'active': ''}}">
+            <app-carouse-item
+              [appDetails]="app"
+              [showImage]="true"
+            ></app-carouse-item>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon carousel-custom-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" id="carousel-item-1" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon carousel-custom-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!--End of Dynamic carousel section-->
+
+        <!--Search-Field input-->
+      <div class="row">
+        <div class="input-group search-field">
+          <input type="text" placeholder="Search apps"
+                 class="form-control cus custom-search-input"
+                 (keyup)="onSearchApps($event)">
+
+          <div class="list-group float-over-another" [ngStyle]="{'display': searchText ? 'block' : 'none'}">
+            <button type="button" class="list-group-item list-group-item-action" style="display: inline-flex"
+                    *ngFor="let app of ((allAppsState$ | async).entities | filterBy: ['appName']: searchText);
+                trackBy: trackByFn;" [routerLink]="'/apps/view/'+app.id">
+              <div class="app-item-icon">
+                <div class="app-item-icon-loader">
+                  <img [src]="app.icon" alt="" class="app-item-image-on-list-view">
+                </div>
+              </div>
+              <div class="app-item-header-name">
+                {{app.appName}}
+              </div>
+
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <!--End of Search-Field input-->
+
+        <!--default div show for all categories clicked-->
+      <div class="animated fadeInUp" *ngIf="!selectedCategory || selectedCategory.categoryName === 'All'">
+
+        <!--Three top Apps list-->
+      <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3]">
+          <app-item-card-loader></app-item-card-loader>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
+        <div class="col-lg-4 col-md-6 mb-4 animated zoomIn"
+             *ngFor="let app of (allAppsState$ | async).entities | filterBy: ['isTop3']: true | slice:0:3;
+                trackBy: trackByFn;">
+          <app-app-item-holder
+            [appDetails]="app"
+            [category]="(appsCategories$ | async).entities[app.categoryId]"
+          ></app-app-item-holder>
+        </div>
+      </div>
+      <!--End of Three top Apps list-->
+
+        <!--Essential Apps section-->
+      <div class="custom-section">
+        <div class="apps-section-header">
+          <div class="apps-section-header-title">Essential Apps</div>
+          <div class="apps-section-header-see-all"
+               (click)="toggleCategory($event, 'web-app')"
+          ><a href="#!" class="float-sm-right see-all"> See all</a></div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3,1,2,3]">
+            <app-app-item-loader></app-app-item-loader>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
+          <div class="col-lg-4 col-md-6 mb-4 animated fadeInRight"
+               *ngFor="let app of (allAppsState$ | async).entities
+               | filterBy: ['categoryId'] : 'web-app' | slice:0:6;
+                  trackBy: trackByFn;">
+            <app-app-item-list-holder
+              [appDetails]="app"
+              [category]="(appsCategories$ | async).entities[app.categoryId]"
+            ></app-app-item-list-holder>
+          </div>
+        </div>
+      </div>
+      <!--End of Essential Apps section-->
+
+      <!--Mobile Apps section-->
+      <div class="custom-section">
+        <div class="apps-section-header">
+          <div class="apps-section-header-title">Mobile Apps</div>
+          <div class="apps-section-header-see-all"
+               (click)="toggleCategory($event, 'mobile-app')"
+          ><a href="#!" class="float-sm-right see-all"> See all</a></div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3,1,2,3]">
+            <app-app-item-loader></app-app-item-loader>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
+          <div class="col-lg-4 col-md-6 mb-4 animated fadeInRight"
+               *ngFor="let app of (allAppsState$ | async).entities
+               | filterBy: ['categoryId'] : 'mobile-app' | slice:0:6;
+                       trackBy: trackByFn;">
+            <app-app-item-list-holder
+              [appDetails]="app"
+              [category]="(appsCategories$ | async).entities[app.categoryId]"
+            ></app-app-item-list-holder>
+          </div>
+        </div>
+      </div>
+      <!--End of Mobile Apps section-->
+
+      <!--Desktop Apps section-->
+      <div class="custom-section">
+        <div class="apps-section-header">
+          <div class="apps-section-header-title">Desktop Apps</div>
+          <div class="apps-section-header-see-all"
+               (click)="toggleCategory($event, 'desktop-app')"
+          ><a href="#!" class="float-sm-right see-all"> See all</a></div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3,1,2,3]">
+            <app-app-item-loader></app-app-item-loader>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
+          <div class="col-lg-4 col-md-6 mb-4 animated fadeInRight"
+               *ngFor="let app of (allAppsState$ | async).entities
+               | filterBy: ['categoryId'] : 'desktop-app' | slice:0:6;
+                  trackBy: trackByFn;">
+            <app-app-item-list-holder
+              [appDetails]="app"
+              [category]="(appsCategories$ | async).entities[app.categoryId]"
+            ></app-app-item-list-holder>
+          </div>
+        </div>
+      </div>
+      <!--End of Desktop Apps section-->
+
+      </div>
+
+        <!--Custom selection for application category view-->
+      <div class="animated fadeInUp" *ngIf="selectedCategory && selectedCategory.categoryName !== 'All'">
+        <!--Custom Apps section-->
+        <div class="custom-section">
+          <div class="apps-section-header">
+            <div class="apps-section-header-title">{{ selectedCategory.categoryName}}</div>
+            <!--<div class="apps-section-header-see-all"><a href="#!" class="float-sm-right see-all"> See all</a></div>-->
+          </div>
+
+          <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
+            <div class="col-lg-4 col-md-6 mb-4 animated fadeInUp"
+                 *ngFor="let app of (allAppsState$ | async).entities
+               | filterBy: ['categoryId'] : selectedCategory ? selectedCategory.id: '';
+                       trackBy: trackByFn;">
+              <app-app-item-list-holder
+                [appDetails]="app"
+                [category]="(appsCategories$ | async).entities[app.categoryId]"
+              ></app-app-item-list-holder>
+            </div>
+          </div>
+        </div>
+        <!--End of Mobile Apps section-->
+      </div>
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+

@@ -1,0 +1,10 @@
+.home-padding-top{
+  padding-top: 5px;
+}
+
+@media (min-width: 992px) {
+  .home-padding-top {
+    padding-top: 56px;
+  }
+
+}

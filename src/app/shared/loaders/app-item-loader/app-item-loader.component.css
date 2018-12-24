@@ -1,0 +1,21 @@
+.app-item-icon-loader{
+ padding: 3%;
+  border-radius: 5px;
+}
+.app-item-header-name{
+  padding-top: 5px;
+}
+.app-item-icon{
+  width: 25%;
+  margin-left: 5%;
+}
+.app-item-headers{
+  width: 70%;
+}
+.card:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: 0.7s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

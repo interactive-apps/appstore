@@ -1,0 +1,27 @@
+
+<div class="card h-100" style="border-radius: 8px" [routerLink]="'/apps/view/'+appDetails.id">
+  <div class="row">
+    <div class="app-item-icon">
+      <div class="app-item-icon-loader">
+        <img [src]="appDetails.icon" alt="" class="app-item-image-on-list-view">
+      </div>
+    </div>
+
+    <div class="app-item-headers">
+      <div class="row">
+        <div class="col">
+          <div class="app-item-header-name">
+            {{appDetails.appName}}
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="app-item-header-name">
+            {{category.categoryName}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

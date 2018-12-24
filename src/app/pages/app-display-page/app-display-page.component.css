@@ -1,0 +1,51 @@
+.app-card{
+  height: 250px;
+  border-radius: 6px;
+}
+.custom-row{
+  display: grid;
+}
+.left-items-padding {
+  margin-top: 3%;
+  padding-left: 3%;
+  cursor: pointer;
+}
+
+.left-items-padding:hover {
+  background-color: #eff5ff;
+  border-radius: 5px;
+}
+
+.app-item-section-spacing{
+  padding-top: 10%;
+  margin-bottom: 0px;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: 0.7s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.app-image-holder{
+  height: 100%;
+  width: 100%;
+}
+.app-item-image{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 80%;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .app-item-image{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    width: 60%;
+    display: block;
+  }
+}

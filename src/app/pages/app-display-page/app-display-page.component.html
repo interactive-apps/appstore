@@ -1,0 +1,100 @@
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <a href="#/apps" class="my-4">  Browse Apps</a>
+
+  </div>
+
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card app-card"
+           *ngIf="!selectedApp">
+        <app-progressive-loader
+          [height]="'250px'"
+        ></app-progressive-loader>
+      </div>
+
+      <div class="card app-card border-0"
+      *ngIf="selectedApp">
+        <div class="app-image-holder">
+          <img [src]="selectedApp.icon" alt="" class="app-item-image">
+        </div>
+      </div>
+
+      <div class="row custom-row">
+        <div class="btn btn-outline-secondary mx-3 my-2">
+          <i class="fa fa-eye" aria-hidden="true" style="font-size: 18px;"></i>
+          View Demo</div>
+        <div class="btn btn-outline-secondary mx-3">
+          <i class="fa fa-cloud-download" aria-hidden="true" style="font-size: 18px;"></i>
+          Download </div>
+        <div class="btn btn-outline-secondary mx-3 my-2">
+          <i class="fa fa-book" aria-hidden="true" style="font-size: 18px;"></i>
+          Documentation </div>
+      </div>
+
+        <h4 class="app-item-section-spacing">Categories</h4>
+        <ul class="list-group list-group-flush">
+          <li href="#" class="list-group list-group-item-action left-items-padding"
+              *ngIf="!selectedApp">
+            <app-progressive-loader></app-progressive-loader>
+          </li>
+          <li href="#" class="list-group list-group-item-action left-items-padding"
+              *ngIf="selectedApp">
+            {{(appsCategories$ | async).entities[selectedApp.categoryId].categoryName}}
+          </li>
+        </ul>
+
+      <h4 class="app-item-section-spacing">Developer</h4>
+      <ul class="list-group list-group-flush">
+        <li href="#" class="list-group list-group-item-action left-items-padding"
+            *ngIf="!selectedApp">
+          <app-progressive-loader></app-progressive-loader>
+        </li>
+        <li href="#" class="list-group list-group-item-action left-items-padding"
+            *ngIf="selectedApp">
+          <a [href]="selectedApp.developer.site"> {{selectedApp.developer.name}}</a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-9">
+
+      <h1 *ngIf="!selectedApp"><app-progressive-loader [width]="'45%'"></app-progressive-loader></h1>
+      <h1 *ngIf="selectedApp">{{selectedApp.appName}}</h1>
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description"
+             role="tab" aria-controls="description" aria-selected="true">Description</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="releases-tab" data-toggle="tab" href="#releases"
+             role="tab" aria-controls="releases" aria-selected="false">Releases</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active"
+             id="description" role="tabpanel" aria-labelledby="description-tab">
+            <app-app-description-page
+              [description]="selectedApp ? selectedApp.description : false"
+              [apps]="(apps$ | async).entities"
+            ></app-app-description-page>
+        </div>
+        <div class="tab-pane fade" id="releases" role="tabpanel" aria-labelledby="releases-tab">
+          <app-app-release-page></app-app-release-page>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+

@@ -1,0 +1,11 @@
+<div class="card h-100" style="border-radius: 8px" [routerLink]="'/apps/view/'+appDetails.id">
+  <div class="app-image-holder">
+    <img [src]="appDetails.icon" alt="" class="app-item-image">
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">
+      {{appDetails.appName}}
+    </h4>
+    {{category.categoryName}}
+  </div>
+</div>
