@@ -81,7 +81,7 @@
              id="description" role="tabpanel" aria-labelledby="description-tab">
             <app-app-description-page
               [description]="selectedApp ? selectedApp.description : false"
-              [apps]="(apps$ | async).entities"
+              [features]="selectedApp ? selectedApp.features : []"
             ></app-app-description-page>
         </div>
         <div class="tab-pane fade" id="releases" role="tabpanel" aria-labelledby="releases-tab">

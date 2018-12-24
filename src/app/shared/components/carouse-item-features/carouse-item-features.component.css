@@ -1,0 +1,60 @@
+.custom-row{
+  height: 320px;
+}
+
+.carouse-app-section{
+  width: 40%;
+}
+.carouse-app-detail-section{
+  width: 60%;
+}
+.carouse-app-description{
+  text-align: center;
+  margin: auto;
+  padding: 11%;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.carouse-app-icon-image{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 55%;
+  display: block;
+}
+
+.carouse-app-icon{
+  cursor: pointer;
+  height: 320px;
+  width: 100%;
+}
+
+
+
+
+.line-1{
+  position: relative;
+  top: 40%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1s steps(44) 1s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}

@@ -21,7 +21,7 @@ export class AppDisplayPageComponent implements OnInit {
     const currentRoute = this.router.url;
     const currentSelectedAppId = currentRoute.split('/')[3] ?
       currentRoute.split('/')[3] : '';
-    this.apps$ = this.store.select(getAppsStateList);
+    // this.apps$ = this.store.select(getAppsStateList);
       this.store.select(getAppsStateList).subscribe((appsState: any) => {
         if (appsState.entities.length > 0) {
           appsState.entities.forEach((app: any) => {

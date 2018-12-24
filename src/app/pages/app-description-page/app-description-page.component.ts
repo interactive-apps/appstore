@@ -9,7 +9,6 @@ export class AppDescriptionPageComponent implements OnInit {
 
   @Input() description: any;
   @Input() features: any;
-  @Input() apps: any;
 
   constructor() { }
 

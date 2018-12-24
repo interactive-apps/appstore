@@ -1,0 +1,14 @@
+<div class="row custom-row">
+  <div class="animated zoomIn"
+       [ngStyle]="{'width': showImage ? '40%' : '0%'}">
+    <div class="carouse-app-icon"*ngIf="feature.icon" >
+      <img [src]="feature.icon" alt="" class="carouse-app-icon-image">
+    </div>
+  </div>
+  <div class="animated fadeInRight"
+       [ngStyle]="{'width': showImage ? '60%' : '100%'}">
+    <div class="carouse-app-description" title="Description">
+      {{feature.info}}
+    </div>
+  </div>
+</div>

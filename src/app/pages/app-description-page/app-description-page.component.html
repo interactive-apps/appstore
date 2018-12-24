@@ -9,11 +9,11 @@
     </p>
   </div>
 
-  <div class="row">
+  <div class="row" style="display: block">
     <h3 class="app-item-description-spacing">Features</h3>
     <!--Loader imitating carousel-->
     <div class="carousel slide my-2" data-ride="carousel"
-         *ngIf="apps.length < 1">
+         *ngIf="features.length < 1">
       <div style="overflow: hidden; width: 100%">
         <app-progressive-loader
           [height]="'320px'"
@@ -26,18 +26,18 @@
 
     <!--Dynamic carousel section-->
     <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel"
-         *ngIf="apps.length > 0">
+         *ngIf="features.length > 0">
       <ol class="carousel-indicators">
         <li id="carousel-item-0" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div  *ngFor="let app of apps; let i = index" class="carousel-item {{(i === 0)? 'active': ''}}">
-          <app-carouse-item
-            [appDetails]="app"
+        <div  *ngFor="let feature of features; let i = index" class="carousel-item {{(i === 0)? 'active': ''}}">
+          <app-carouse-item-features
+            [feature]="feature"
             [showImage]="false"
-          ></app-carouse-item>
+          ></app-carouse-item-features>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
