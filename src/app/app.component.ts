@@ -11,6 +11,7 @@ import {applications} from './store/apps-data/applications';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   constructor(private store: Store<AppState>) {
     this.store.dispatch(new AddAppCategories(appCategories));
 
