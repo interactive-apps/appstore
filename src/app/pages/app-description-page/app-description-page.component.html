@@ -2,7 +2,9 @@
   <div class="row" style="display: block;">
     <h3 class="app-item-description-spacing">Description</h3>
     <div *ngIf="!description">
-      <app-progressive-loader [height]="'100px'"></app-progressive-loader>
+      <div class="mt-2 w-100"><app-progressive-loader [height]="'15px'"></app-progressive-loader></div>
+      <div class="mt-2 w-75"><app-progressive-loader [height]="'13px'"></app-progressive-loader></div>
+      <div class="mt-2 w-50"><app-progressive-loader [height]="'10px'"></app-progressive-loader></div>
     </div>
     <p *ngIf="description">
       {{description}}

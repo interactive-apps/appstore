@@ -38,7 +38,7 @@
         <ul class="list-group list-group-flush">
           <li href="#" class="list-group list-group-item-action left-items-padding"
               *ngIf="!selectedApp">
-            <app-progressive-loader></app-progressive-loader>
+            <app-progressive-loader [height]="'10px'"></app-progressive-loader>
           </li>
           <li href="#" class="list-group list-group-item-action left-items-padding"
               *ngIf="selectedApp">
@@ -50,7 +50,7 @@
       <ul class="list-group list-group-flush">
         <li href="#" class="list-group list-group-item-action left-items-padding"
             *ngIf="!selectedApp">
-          <app-progressive-loader></app-progressive-loader>
+          <app-progressive-loader [height]="'10px'"></app-progressive-loader>
         </li>
         <li href="#" class="list-group list-group-item-action left-items-padding"
             *ngIf="selectedApp">
@@ -63,7 +63,7 @@
 
     <div class="col-lg-9">
 
-      <h1 *ngIf="!selectedApp"><app-progressive-loader [width]="'45%'"></app-progressive-loader></h1>
+      <h1 *ngIf="!selectedApp"><app-progressive-loader [width]="'45%'" [height]="'30px'"></app-progressive-loader></h1>
       <h1 *ngIf="selectedApp">{{selectedApp.appName}}</h1>
 
       <ul class="nav nav-tabs" id="myTab" role="tablist">
