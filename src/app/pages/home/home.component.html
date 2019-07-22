@@ -82,7 +82,7 @@
       <div class="animated fadeInUp" *ngIf="!selectedCategory || selectedCategory.categoryName === 'All'">
 
         <!--Three top Apps list-->
-      <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
+      <div class="row" *ngIf="(allAppsState$ | async).entities.length > 1">
         <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3]">
           <app-item-card-loader></app-item-card-loader>
         </div>
