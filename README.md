@@ -1,6 +1,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Build Status](https://travis-ci.org/hisptz/national-dqa-app.svg?branch=master)](https://travis-ci.org/hisptz/national-dqa-app)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/bd5023693b8a7c9958ee/maintainability)](https://codeclimate.com/github/hisptz/appstore/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bd5023693b8a7c9958ee/test_coverage)](https://codeclimate.com/github/hisptz/appstore/test_coverage)
 
 
 # HISPTZ Appstore App
