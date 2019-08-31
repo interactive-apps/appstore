@@ -5,6 +5,7 @@ exclude_patterns:
   - 'dist'
   - 'src/app/store/apps-data/applications/'
   - 'src/app/store/actions/'
+  - 'src/app/store/reducers/'
   - '**/*.log'
   - '**/*.ico'
   - 'e2e/'
