@@ -3,6 +3,7 @@ exclude_patterns:
   - 'docs'
   - 'documentation'
   - 'dist'
+  - 'src/app/store/apps-data/applications/'
   - '**/*.log'
   - '**/*.ico'
   - 'e2e/'
