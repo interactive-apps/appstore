@@ -1,10 +1,31 @@
-# HisptzApps
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://travis-ci.org/hisptz/national-dqa-app.svg?branch=master)](https://travis-ci.org/hisptz/national-dqa-app)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# HISPTZ Appstore App
+
+A custom web application aiming on displaying various interactive apps developed by HISP Tanzania team.   
+
+### Prerequisites
+>- Java JDK v8 or later 
+>- Node Js v8 or later
+>- Angular CLI v6 or later
+
+### Installation
+
+> * Clone the repository from Git
+```angularjs
+git clone https://github.com/hisptz/appstore.git
+```
+> * Enter to the directory and execute the following npm command to install the application to your computer.
+```angularjs
+npm install
+```
+> * Once the application is installed and all its dependency hence execute the next command to run the application. 
+```angularjs
+npm start
+```
 
 ## Code scaffolding
 
