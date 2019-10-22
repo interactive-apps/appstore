@@ -4,7 +4,7 @@ export const userImport = {
     id: 'user-import',
     categoryId: 'web-app',
     isTop3: true,
-    icon: './assets/app-icons/i-dashboard.png',
+    icon: './assets/app-icons/user-import.ico',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [
       {info: 'Feature one'}, {info: 'Feature two'},

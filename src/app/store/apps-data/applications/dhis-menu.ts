@@ -1,6 +1,6 @@
 
 export const dhisMenu = {
-    appName: 'DHIS menu',
+    appName: 'DHIS Menu',
     id: 'dhis-menu',
     categoryId: 'developer-tool',
     isTop3: true,

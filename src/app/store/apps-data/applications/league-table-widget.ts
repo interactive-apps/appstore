@@ -1,9 +1,9 @@
 export const leagueTableWidget = {
-    appName: 'League Table',
+    appName: 'League Table Widget',
     id: 'league-table-widget',
     categoryId: 'widget',
     isTop3: false,
-    icon: './assets/app-icons/i-maps.png',
+    icon: './assets/app-icons/leaguetable.png',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [{info: 'Feature one'}, {info: 'Feature two'},
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],

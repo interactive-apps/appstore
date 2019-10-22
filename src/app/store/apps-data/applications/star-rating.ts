@@ -3,7 +3,7 @@ export const startRating = {
     id: 'star-rating-report',
     categoryId: 'web-app',
     isTop3: false,
-    icon: './assets/app-icons/i-maps.png',
+    icon: './assets/app-icons/star-rating.png',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [{info: 'Feature one'}, {info: 'Feature two'},
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],

@@ -1,6 +1,6 @@
 
 export const indicatorSearch = {
-    appName: 'Indicator search',
+    appName: 'Indicator Search',
     id: 'i-search',
     categoryId: 'web-app',
     isTop3: false,

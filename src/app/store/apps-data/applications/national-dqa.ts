@@ -4,7 +4,7 @@ export const nationalDQA = {
     id: 'national-dqa',
     categoryId: 'web-app',
     isTop3: true,
-    icon: './assets/app-icons/i-dashboard.png',
+    icon: './assets/app-icons/national-dqa.ico',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [
       {info: 'Feature one'}, {info: 'Feature two'},

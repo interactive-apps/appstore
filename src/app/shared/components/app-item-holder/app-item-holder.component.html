@@ -1,4 +1,6 @@
-<div class="card h-100 border-radius-6px" [routerLink]="'/apps/view/'+appDetails.id">
+<div class="card h-100 border-radius-6px"
+[title]="appDetails.appName"
+[routerLink]="'/apps/view/'+appDetails.id">
   <div class="app-image-holder">
     <img [src]="appDetails.icon" alt="" class="app-item-image">
   </div>

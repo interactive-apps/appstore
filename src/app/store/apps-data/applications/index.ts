@@ -31,6 +31,8 @@ import { bnaWidget } from './bna-widget';
 import { brnDataentry } from './brn-dataEntry';
 import { nationalDQA } from './national-dqa';
 import { userImport } from './user-import';
+import { cascadeWidget } from './909090-cascade-widget';
+import { dataQualityWidget } from './data-quality-widget';
 
 export const applications: any[] = [
   metaBase, functionMaintenance, healthPortal,
@@ -43,5 +45,6 @@ export const applications: any[] = [
   userSupport, indicatorDictionary, leagueTable,
   leagueTableWidget, dhpApp, startRating, malariaDashboard,
   nacpDashboard, bnaApp, bnaWidget, brnDataentry,
-  nationalDQA, userImport
+  nationalDQA, userImport, cascadeWidget,
+  dataQualityWidget
 ];

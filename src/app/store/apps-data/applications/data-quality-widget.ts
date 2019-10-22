@@ -1,10 +1,10 @@
 
-export const brnDataentry = {
-    appName: 'BRN Data Entry',
-    id: 'brn-app',
-    categoryId: 'web-app',
+export const dataQualityWidget = {
+    appName: 'Data Quality Widget',
+    id: 'data-quality-widget',
+    categoryId: 'widget',
     isTop3: true,
-    icon: './assets/app-icons/brn.png',
+    icon: './assets/app-icons/dqa.png',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [
       {info: 'Feature one'}, {info: 'Feature two'},

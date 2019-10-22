@@ -1,6 +1,6 @@
 
 export const functionMaintenance = {
-    appName: 'Function maintenance',
+    appName: 'Function Maintenance',
     id: 'function-maintenance',
     categoryId: 'web-app',
     isTop3: false,

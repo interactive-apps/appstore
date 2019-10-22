@@ -1,6 +1,6 @@
 
 export const dhisOrgunitTree = {
-    appName: 'DHIS orgunit tree',
+    appName: 'DHIS Orgunit Tree',
     id: 'dhis-orgunit-tree',
     categoryId: 'developer-tool',
     isTop3: true,

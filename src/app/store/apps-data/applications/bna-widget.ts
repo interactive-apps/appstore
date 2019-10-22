@@ -4,7 +4,7 @@ export const bnaWidget = {
     id: 'bna-widget',
     categoryId: 'widget',
     isTop3: true,
-    icon: './assets/app-icons/i-dashboard.png',
+    icon: './assets/app-icons/bna.png',
     developer: {name: 'HISP-TZ', site: 'https://hisptanzania.org'},
     features: [
       {info: 'Feature one'}, {info: 'Feature two'},

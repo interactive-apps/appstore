@@ -1,5 +1,7 @@
 
-<div class="card border-radius-6px" [routerLink]="'/apps/view/'+appDetails.id">
+<div class="card border-radius-6px"
+[title]="appDetails.appName"
+[routerLink]="'/apps/view/'+appDetails.id">
   <div class="row ml-0 mr-0">
     <div class="app-item-icon">
       <div class="app-item-icon-loader">
