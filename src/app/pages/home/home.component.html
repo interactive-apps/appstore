@@ -76,6 +76,7 @@
           ><a href="#!" class="float-sm-right see-all"> See all</a></div>
         </div>
 
+        <!-- *ngIf="(allAppsState$ | async).entities.length < 1" -->
         <div class="row" *ngIf="(allAppsState$ | async).entities.length < 1">
           <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cards of [1,2,3,1,2,3]">
             <app-app-item-loader></app-app-item-loader>
