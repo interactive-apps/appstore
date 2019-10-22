@@ -1,6 +1,5 @@
 
-export const smtReports: any[] = [
-  {
+export const smtReports = {
     appName: 'SMT reports',
     id: 'smt-report',
     categoryId: 'mobile-app',
@@ -11,5 +10,4 @@ export const smtReports: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Proin fermentum leo vel orci porta non pulvinar neque laoreet.' +
     'Elit pellentesque habitant morbi tristique senectus et netus.'
-  }
-];
+  };

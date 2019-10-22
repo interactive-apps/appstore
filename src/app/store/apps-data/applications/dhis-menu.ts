@@ -1,6 +1,5 @@
 
-export const dhisMenu: any[] = [
-  {
+export const dhisMenu = {
     appName: 'DHIS menu',
     id: 'dhis-menu',
     categoryId: 'developer-tool',
@@ -11,5 +10,4 @@ export const dhisMenu: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Posuere urna nec tincidunt praesent. Eu ultrices vitae auctor' +
     'eu augue ut lectus arcu bibendum. Id leo in vitae turpis massa.'
-  }
-];
+  };

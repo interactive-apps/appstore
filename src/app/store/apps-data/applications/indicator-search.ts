@@ -1,6 +1,5 @@
 
-export const indicatorSearch: any[] = [
-  {
+export const indicatorSearch = {
     appName: 'Indicator search',
     id: 'i-search',
     categoryId: 'web-app',
@@ -11,5 +10,4 @@ export const indicatorSearch: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' +
     'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-  }
-];
+  };

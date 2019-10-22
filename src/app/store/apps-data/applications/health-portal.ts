@@ -1,6 +1,5 @@
 
-export const healthPortal: any[] = [
-  {
+export const healthPortal = {
     appName: 'Health Portal',
     id: 'health-portal',
     categoryId: 'mobile-app',
@@ -12,5 +11,4 @@ export const healthPortal: any[] = [
     description: 'Posuere lorem ipsum dolor sit amet consectetur adipiscing elit.' +
     'Faucibus purus in massa tempor nec feugiat nisl.' +
     'Ac felis donec et odio pellentesque.'
-  }
-];
+  };

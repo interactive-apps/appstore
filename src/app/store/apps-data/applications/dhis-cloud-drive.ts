@@ -1,6 +1,5 @@
 
-export const dhisCloudDrive: any[] = [
-  {
+export const dhisCloudDrive = {
     appName: 'i-Archive',
     id: 'i-archive',
     categoryId: 'web-app',
@@ -12,5 +11,4 @@ export const dhisCloudDrive: any[] = [
     description: 'In iaculis nunc sed augue lacus viverra vitae.' +
     'Egestas sed sed risus pretium. Eget aliquet nibh' +
     'praesent tristique magna sit amet purus gravida.'
-  }
-];
+};

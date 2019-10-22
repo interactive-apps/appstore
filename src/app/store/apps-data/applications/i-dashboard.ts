@@ -1,6 +1,5 @@
 
-export const IDashboard: any[] = [
-  {
+export const IDashboard = {
     appName: 'i-Dashboard',
     id: 'i-dashboard',
     categoryId: 'web-app',
@@ -14,5 +13,4 @@ export const IDashboard: any[] = [
     ],
     description: 'Vel risus commodo viverra maecenas accumsan lacus vel facilisis.' +
     'Sagittis purus sit amet volutpat consequat mauris.'
-  }
-];
+  };

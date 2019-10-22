@@ -1,6 +1,5 @@
 
-export const touch: any[] = [
-  {
+export const touch = {
     appName: 'Touch',
     id: 'touch',
     categoryId: 'desktop-app',
@@ -11,5 +10,4 @@ export const touch: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Amet nisl suscipit adipiscing bibendum est ultricies.' +
     'Nunc mi ipsum faucibus vitae aliquet nec ullamcorper.'
-  }
-];
+  };

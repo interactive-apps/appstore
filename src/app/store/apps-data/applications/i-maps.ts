@@ -1,6 +1,5 @@
 
-export const interactiveMaps: any[] = [
-  {
+export const interactiveMaps = {
     appName: 'i-Maps',
     id: 'i-maps',
     categoryId: 'web-app',
@@ -12,5 +11,4 @@ export const interactiveMaps: any[] = [
     description: 'In iaculis nunc sed augue lacus viverra vitae.' +
     'Egestas sed sed risus pretium. Eget aliquet nibh' +
     'praesent tristique magna sit amet purus gravida.'
-  }
-];
+  };

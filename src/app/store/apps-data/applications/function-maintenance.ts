@@ -1,6 +1,5 @@
 
-export const functionMaintenance: any[] = [
-  {
+export const functionMaintenance = {
     appName: 'Function maintenance',
     id: 'function-maintenance',
     categoryId: 'web-app',
@@ -11,5 +10,4 @@ export const functionMaintenance: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Tempor id eu nisl nunc mi ipsum faucibus vitae. Lorem donec massa' +
     'sapien faucibus et. Ut ornare lectus sit amet est placerat.'
-  }
-];
+  };

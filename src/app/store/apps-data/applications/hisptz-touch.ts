@@ -1,6 +1,5 @@
 
-export const hisptzTouch: any[] = [
-  {
+export const hisptzTouch = {
     appName: 'HISPTZ-Touch',
     id: 'hisptz-touch',
     categoryId: 'mobile-app',
@@ -11,5 +10,4 @@ export const hisptzTouch: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Metus vulputate eu scelerisque felis imperdiet proin fermentum.' +
     'Mollis nunc sed id semper risus.'
-  }
-];
+  };

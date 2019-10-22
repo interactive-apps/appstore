@@ -1,6 +1,5 @@
 
-export const iAssignments: any[] = [
-  {
+export const iAssignments = {
     appName: 'i-Assignments',
     id: 'i-assignments',
     categoryId: 'web-app',
@@ -11,5 +10,4 @@ export const iAssignments: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Nibh venenatis cras sed felis eget velit aliquet sagittis.' +
     'Aliquam etiam erat velit scelerisque in dictum non.'
-  }
-];
+  };

@@ -16,13 +16,14 @@ import {scorecardWidget} from './scorecard-widget';
 import {dhisMenu} from './dhis-menu';
 import {dhisHttpClient} from './dhis-httpClient';
 import {dhisOrgunitTree} from './dhis-orgunit-tree';
+import { touchMSDQI } from './touch-msdqi';
 
 export const applications: any[] = [
-  ...metaBase, ...functionMaintenance, ...healthPortal,
-  ...hisptzTouch, ...iAssignments, ...indicatorSearch,
-  ...mohGuidelines, ...scorecard, ...IDashboard,
-  ...smtReports, ...touch, ...touchDashboard,
-  ...interactiveMaps, ...scorecardWidget,
-  ...dhisMenu, ...dhisHttpClient, ...dhisOrgunitTree,
-  ...dhisCloudDrive,
+  metaBase, functionMaintenance, healthPortal,
+  hisptzTouch, iAssignments, indicatorSearch,
+  mohGuidelines, scorecard, IDashboard,
+  smtReports, touch, touchDashboard,
+  interactiveMaps, scorecardWidget,
+  dhisMenu, dhisHttpClient, dhisOrgunitTree,
+  dhisCloudDrive, touchMSDQI
 ];

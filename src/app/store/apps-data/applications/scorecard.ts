@@ -1,6 +1,5 @@
 
-export const scorecard: any[] = [
-  {
+export const scorecard = {
     appName: 'Scorecard',
     id: 'scorecard',
     categoryId: 'web-app',
@@ -11,5 +10,4 @@ export const scorecard: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Posuere urna nec tincidunt praesent. Eu ultrices vitae auctor' +
     'eu augue ut lectus arcu bibendum. Id leo in vitae turpis massa.'
-  }
-];
+  };

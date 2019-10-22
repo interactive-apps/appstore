@@ -1,6 +1,5 @@
 
-export const mohGuidelines: any[] = [
-  {
+export const mohGuidelines = {
     appName: 'MoH Guidelines',
     id: 'moh-guidelines',
     categoryId: 'mobile-app',
@@ -11,5 +10,4 @@ export const mohGuidelines: any[] = [
       {info: 'Feature three'}, {info: 'Feature four'}, {info: 'Feature five'}],
     description: 'Sollicitudin aliquam ultrices sagittis orci a.' +
     'Nibh tortor id aliquet lectus proin nibh nisl condimentum.'
-  }
-];
+  };
