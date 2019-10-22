@@ -129,9 +129,9 @@
       <!--Desktop Apps section-->
       <div class="custom-section">
         <div class="apps-section-header">
-          <div class="apps-section-header-title">Desktop Apps</div>
+          <div class="apps-section-header-title">Widgets</div>
           <div class="apps-section-header-see-all"
-               (click)="toggleCategory($event, 'desktop-app')"
+               (click)="toggleCategory($event, 'widget')"
           ><a href="#!" class="float-sm-right see-all"> See all</a></div>
         </div>
 
@@ -144,7 +144,7 @@
         <div class="row" *ngIf="(allAppsState$ | async).entities.length > 0">
           <div class="col-lg-4 col-md-6 mb-4 animated zoomIn"
                *ngFor="let app of (allAppsState$ | async).entities
-               | filterBy: ['categoryId'] : 'desktop-app' | slice:0:6;
+               | filterBy: ['categoryId'] : 'widget' | slice:0:6;
                   trackBy: trackByFn;">
             <app-app-item-list-holder
               [appDetails]="app"
