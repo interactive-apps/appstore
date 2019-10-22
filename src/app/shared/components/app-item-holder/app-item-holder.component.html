@@ -1,11 +1,14 @@
-<div class="card h-100" style="border-radius: 8px" [routerLink]="'/apps/view/'+appDetails.id">
+<div class="card h-100 border-radius-6px" [routerLink]="'/apps/view/'+appDetails.id">
   <div class="app-image-holder">
     <img [src]="appDetails.icon" alt="" class="app-item-image">
   </div>
-  <div class="card-body">
-    <h4 class="card-title">
+  <div class="col-sm pl-0 pr-0  mb-2 mt-2">
+    <div class="row ml-1 mr-1 item-app-header-font overflow_ellipsis">
       {{appDetails.appName}}
-    </h4>
-    {{category.categoryName}}
+    </div>
+    <div class="row ml-1 mr-1 item-app-type-font">
+      {{category.categoryName}}
+    </div>
+    
   </div>
 </div>

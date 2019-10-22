@@ -8,17 +8,16 @@
 }
 .app-item-icon{
   width: 25%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 .app-item-headers{
   width: 70%;
 }
 .card:hover {
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
-  transition: 0.7s;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.15);
+  text-decoration: none;
+  transition: box-shadow .15s ease-out;
 }
 .app-item-image-on-list-view{
   height: 50px;
@@ -28,6 +27,6 @@
 @media (max-width: 992px) {
   .app-item-icon{
     width: 15%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
   }
 }
