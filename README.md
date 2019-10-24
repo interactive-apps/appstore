@@ -14,7 +14,7 @@ A custom web application aiming on displaying various interactive apps developed
 
 ### Installation
 
-> * Clone the repository from Git
+> * Clone the repository from GitHub
 ```angularjs
 git clone https://github.com/hisptz/appstore.git
 ```
@@ -22,7 +22,7 @@ git clone https://github.com/hisptz/appstore.git
 ```angularjs
 npm install
 ```
-> * Once the application is installed and all its dependency hence execute the next command to run the application. 
+> * Once the application is installed and all its dependencies, execute the next command to run the application. 
 ```angularjs
 npm start
 ```
